@@ -1,0 +1,109 @@
+body {
+  font-family: "Courier New", monospace;
+  background-image: url(vector-flat-cosmos-design-background-600nw-579763333.webp);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.game-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90vw; /* Responsif, menggunakan 90% lebar viewport */
+  max-width: 500px; /* Batas lebar maksimum */
+}
+
+/* Canvas untuk game Snake */
+#gameCanvas {
+  width: 100%; /* Responsif mengikuti lebar kontainer */
+  height: auto; /* Menjaga proporsi */
+  background-color: black;
+  border: 2px solid #fff;
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Container untuk skor */
+.score-container {
+  margin-top: 20px; /* Jarak antara canvas dan skor */
+  font-size: 2rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+}
+
+/* Tampilan judul skor */
+.score-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+}
+
+/* Tampilan nilai skor */
+.score-value {
+  font-size: 2.5rem;
+  color: #00ff88;
+  font-weight: bold;
+  text-shadow: 0 0 15px rgba(0, 255, 136, 0.8);
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+/* Tombol untuk restart game */
+#restartButton {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: red;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#restartButton:hover {
+  background-color: #555;
+}
+
+/* Media queries untuk memastikan responsif di perangkat kecil */
+@media (max-width: 768px) {
+  .game-container {
+    width: 100%;
+  }
+
+  nav a {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .score-container {
+    font-size: 1.5rem;
+  }
+
+  #restartButton {
+    font-size: 0.9rem;
+  }
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #333333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  justify-content: space-between;
+  margin-top: 2%;
+}
